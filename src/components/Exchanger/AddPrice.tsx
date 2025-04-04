@@ -1,5 +1,5 @@
 "use client";
-import useCurrency from "@/components/Exchanger/hooks/use-currency";
+import useCurrency from "@/shared/hooks/use-currency";
 import { SUGGESTED_VARIANTS } from "@/shared/constants/wallet";
 import { TAddPrice } from "./exchanger.types";
 

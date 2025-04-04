@@ -1,6 +1,6 @@
 "use client";
 
-import useCurrency from "@/components/Exchanger/hooks/use-currency";
+import useCurrency from "@/shared/hooks/use-currency";
 import ExchangeInput from "./ExchangeInput";
 import AcceptButton from "@/components/Exchanger/AcceptButton";
 

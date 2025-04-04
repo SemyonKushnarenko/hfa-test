@@ -8,7 +8,7 @@ import ChangeMode from "@/components/Exchanger/ChangeMode";
 import ExchangerPanel from "@/components/Exchanger/ExchangerPanel";
 import { COURSE } from "@/shared/constants/wallet";
 import { useMode, useWallet } from "@/store/jotai";
-import useCurrency from "@/components/Exchanger/hooks/use-currency";
+import useCurrency from "@/shared/hooks/use-currency";
 import { TAddPrice } from "@/components/Exchanger/exchanger.types";
 
 const Exchanger = () => {
@@ -39,6 +39,8 @@ const Exchanger = () => {
     }, [inputValue]);
 
     const handleAddPrice = (price: TAddPrice) => {
+        if (disabledExchange) return;
+
         const usedInputValue = inputValue ? inputValue : 0;
         if (typeof price === 'number' && price + usedInputValue > currWallet.balance || price === 'all') {
             setInputValue(currWallet.balance);

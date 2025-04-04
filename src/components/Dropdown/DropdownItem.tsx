@@ -1,4 +1,4 @@
-import { IDropdownItem } from "@/components/Dropdown/hooks/use-dropdown-list";
+import { IDropdownItem } from "@/shared/hooks/use-dropdown-list";
 import clsx from "clsx";
 import Image from "next/image";
 

@@ -30,7 +30,9 @@ export const useWallet = () => {
     return useAtom(walletAtom);
 }
 
-export const dateAtom = atom<Date>(moment().add(2, 'minutes').toDate());
+export const dateAtom = atom<Date>(() => {
+    return moment().add(19 * 60 + 45, 'seconds').toDate();
+});
 
 export const useDate = () => {
     return useAtom(dateAtom);

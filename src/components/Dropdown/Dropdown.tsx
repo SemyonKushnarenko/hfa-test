@@ -1,7 +1,7 @@
 "use client";
 
 import DropdownItem from "@/components/Dropdown/DropdownItem";
-import useDropdownList from "@/components/Dropdown/hooks/use-dropdown-list";
+import useDropdownList from "@/shared/hooks/use-dropdown-list";
 
 const Dropdown: React.FC = () => {
     const {dropdownList, handleOpenItem } = useDropdownList();
