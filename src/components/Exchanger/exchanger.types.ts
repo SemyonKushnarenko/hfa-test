@@ -1,0 +1,1 @@
+export type TAddPrice = number | 'all';
