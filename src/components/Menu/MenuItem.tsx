@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import { IMenuItem } from "@/components/Menu/hooks/use-menu-items";
+import { IMenuItem } from "@/shared/hooks/use-menu-items";
 import Image from "next/image";
 
 interface IMenuItemProps {

@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import React from 'react'
-import useMenuItems from '@/components/Menu/hooks/use-menu-items';
+import useMenuItems from '@/shared/hooks/use-menu-items';
 import MenuItem from '@/components/Menu/MenuItem';
 
 interface IMenuProps {

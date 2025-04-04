@@ -1,11 +1,18 @@
 "use client";
 import clsx from "clsx";
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { createPortal } from "react-dom";
 import Menu from "@/components/Menu/Menu";
+import { getDocument } from "@/shared/utils/browser";
 
 const MenuButton = () => {
     const [isOpenedMenu, setIsOpenedMenu] = useState<boolean>(false);
+    const [mounted, setMounted] = useState<boolean>(false);
+    
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+    
     const menuHandler = () => {
         setIsOpenedMenu(!isOpenedMenu);
     }
@@ -29,9 +36,9 @@ const MenuButton = () => {
                     isOpenedMenu && 'transform-(--second-menu-button-span)',
                 )}></span>
             </button>
-            {createPortal(
+            {mounted && createPortal(
                 <Menu isOpenedMenu={isOpenedMenu} />,
-                document.body,
+                getDocument()?.body || document.body,
             )}
         </>
     )
